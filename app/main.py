@@ -44,11 +44,11 @@ class FlyingRobot(BaseRobot):
             super().__init__(name, weight, coords[:2])
             self.coords.append(coords[2])
 
-    def go_up(self, z: int = 1) -> None:
-        self.coords[2] += z
+    def go_up(self, axis_z: int = 1) -> None:
+        self.coords[2] += axis_z
 
-    def go_down(self, z: int = 1) -> None:
-        self.coords[2] -= z
+    def go_down(self, axis_z: int = 1) -> None:
+        self.coords[2] -= axis_z
 
 
 class DeliveryDrone(FlyingRobot):
